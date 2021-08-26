@@ -1,0 +1,27 @@
+<p>list works!</p>
+<h1>Danh sách sản phẩm</h1>
+<button  [routerLink]="['/create/']">Create Book</button>
+<table border="1">
+  <tr>
+    <td>STT</td>
+    <td>Tên Sách</td>
+    <td>Tên Tác Giả</td>
+    <td>Mô Tả</td>
+    <td colspan="2">Action</td>
+
+  </tr>
+  <tr *ngFor="let book of books; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book?.author}}</td>
+    <td>{{book?.description}}</td>
+    <td>
+      <a [routerLink]="['/update/',book.id]">Update</a>
+    </td>
+    <td>
+      <a [routerLink]="['/delete/',book.id]">Delete</a>
+    </td>
+  </tr>
+</table>
+
+

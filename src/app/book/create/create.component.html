@@ -1,0 +1,28 @@
+<p>create works!</p>
+<h1>Tạo Sách Mới</h1>
+<form [formGroup]="bookForm" (ngSubmit)=create()>
+  <table>
+    <tr>
+      <td>Tên Sách:</td>
+      <td><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Tác Giả</td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về </td>
+      <td>
+        <textarea type="text" formControlName="description">
+
+        </textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>
